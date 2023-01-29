@@ -45,4 +45,4 @@ jobs:
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
           password: ${{ secrets.PASSWORD }}
-          script: "cd /var/www/html && ./deploy.sh"
+          script: "cd my_api/ && ./deploy.sh"
