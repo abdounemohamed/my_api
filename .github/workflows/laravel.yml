@@ -44,5 +44,5 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           port: ${{ secrets.PORT }}
-          key: ${{ secrets.server }}
+          key: ${{ secrets.SSHKEY }}
           script: "cd /var/www/html && ./deploy.sh"
