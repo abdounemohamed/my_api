@@ -35,13 +35,16 @@ jobs:
       run: vendor/bin/phpunit
 
   deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
-          username: ${{ secrets.USERNAME }}
-          host: ${{ secrets.HOST }}
-          password: ${{ secrets.PASSWORD }}
-          script: "cd my_api/ && ./deploy.sh"
+          server: s939460169.onlinehome.fr
+          username: u110025229
+          password: Abdoune's4mohamedIONOS
+          server-dir: /my_api/
