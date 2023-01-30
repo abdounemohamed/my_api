@@ -36,6 +36,7 @@ jobs:
       run: vendor/bin/phpunit
 
   deploy:
+    needs: api-tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
