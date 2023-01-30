@@ -26,6 +26,6 @@ class ProductsTest extends TestCase
     {
         $this->json('GET', 'api/v1/key/test')
             ->assertStatus(200)
-           );
+           ;
     }
 }
