@@ -21,4 +21,11 @@ class ProductsTest extends TestCase
                 'message' => 'key created with success'
             ]);
     }
+    
+    public function test_get_key()
+    {
+        $this->json('GET', 'api/v1/key/test')
+            ->assertStatus(200)
+           );
+    }
 }
