@@ -21,7 +21,20 @@ class ProductsTest extends TestCase
                 'message' => 'key created with success'
             ]);
     }
-    
+
+    /**
+     * @return void
+     */
+    public function test_post_key_failure()
+    {
+        //if given data not valid
+        $this->json('POST', 'api/v1/key/post', [])
+            ->assertStatus(422);
+    }
+
+    /**
+     * @return void
+     */
     public function test_get_key()
     {
         $this->json('GET', 'api/v1/key/test')
