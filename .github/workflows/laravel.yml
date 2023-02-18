@@ -45,5 +45,5 @@ jobs:
         with:
           username: ${{ secrets.USERNAME }}
           host: ${{ secrets.HOST }}
-          key: ${{ secrets.KEY }}
+          key: ${{ secrets.PASSWORD }}
           script: "cd my_api/ && ./deploy.sh"
